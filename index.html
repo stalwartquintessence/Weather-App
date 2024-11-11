@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		/>
+		<script src="script.js"></script>
+	</head>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-    <script src="app.js"> </script>
-</head>
+	<body>
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1>Weather <i class="fas fa-arrow-circle-down"></i></h1>
+				<p>This is a simple weather app using AJAX</p>
+			</div>
+		</div>
 
-<body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1>Weather <i class="fas fa-arrow-circle-down"></i></h1>
-            <p>This is a simple weather app using AJAX</p>
-        </div>
-    </div>
-    <div class="container row pl-5 pr-5 ml-5 mr-5">
-        <div class="col p-3">
-            <div class="jumbotron-fluid">
-                <h2 class="card-title">Today's Weather</h2>
-                <input type="text" class="form-control" placeholder="Enter the place" id="city"
-                    oninput="result(this.value)" onblur="result(this.value)">
-            </div>
-        </div>
-        <div class="container col p-3">
-            <div class="col-md-10 col-lg-8 col-xl-6">
-                <div class="bg-image" style="border-radius: 35px;">
-                    <div class="mask" style="background-color: rgba(71, 70, 70, 0.836);"></div>
-                </div>
-                <div class="card-img-overlay text-dark p-5">
-                    <h4 class="mb-0" style="color: rgba(168, 168, 168, 0.671);" id="location">Location</h4>
-                    <p class="display-2 my-3" id="temper">-°C</p>
-                    <h5 style="color: rgba(15, 15, 15, 0.342);" id="weather">Weather</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
+		<div class="container row pl-5 pr-5 ml-5 mr-5">
+			<div class="col p-3">
+				<div class="jumbotron-fluid">
+					<h2 class="card-title">Today's Weather</h2>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Enter the place"
+						id="city"
+						oninput="result()"
+						onblur="result()"
+					/>
+				</div>
+			</div>
+			<div class="container col p-3">
+				<div class="col-md-10 col-lg-8 col-xl-6">
+					<div class="bg-image" style="border-radius: 35px">
+						<div
+							class="mask"
+							style="background-color: rgba(71, 70, 70, 0.836)"
+						></div>
+					</div>
+					<div class="card-img-overlay text-dark p-5">
+						<h4
+							class="mb-0"
+							style="color: rgba(168, 168, 168, 0.671)"
+							id="location"
+						>
+							Location
+						</h4>
+						<p class="display-2 my-3" id="temper">-°C</p>
+						<h5 style="color: rgba(15, 15, 15, 0.342)" id="weather">Weather</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
