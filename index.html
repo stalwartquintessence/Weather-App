@@ -10,17 +10,13 @@
 			rel="stylesheet"
 			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-		/>
 		<script src="script.js"></script>
 	</head>
 
 	<body>
 		<div class="jumbotron jumbotron-fluid">
 			<div class="container">
-				<h1>Weather <i class="fas fa-arrow-circle-down"></i></h1>
+				<h1>Weather</h1>
 				<p>This is a simple weather app using AJAX</p>
 			</div>
 		</div>
@@ -29,14 +25,16 @@
 			<div class="col p-3">
 				<div class="jumbotron-fluid">
 					<h2 class="card-title">Today's Weather</h2>
-					<input
-						type="text"
-						class="form-control"
-						placeholder="Enter the place"
-						id="city"
-						oninput="result()"
-						onblur="result()"
-					/>
+					
+					<!-- Add a form element to handle submit -->
+					<form onsubmit="event.preventDefault(); result();">
+						<input
+							type="text"
+							class="form-control"
+							placeholder="Enter the place"
+							id="city"
+						/>
+					</form>
 				</div>
 			</div>
 			<div class="container col p-3">
