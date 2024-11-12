@@ -22,6 +22,7 @@ async function result() {
         const icon = data.weather[0].icon;
         const temperature = (data.main.temp - 273.15).toFixed(2);
 
+
         document.getElementById("weather").innerText = description;
         document.getElementById("temper").innerText = `${temperature}°C`;
         document.getElementById("location").innerText = capitalize(city);

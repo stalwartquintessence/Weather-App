@@ -10,7 +10,8 @@
 			rel="stylesheet"
 			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 		/>
-		<script src="script.js"></script>
+		<script src="script.js" defer></script>
+		<!-- defer to ensure JS is loaded after DOM -->
 	</head>
 
 	<body>
@@ -25,8 +26,8 @@
 			<div class="col p-3">
 				<div class="jumbotron-fluid">
 					<h2 class="card-title">Today's Weather</h2>
-					
-					<!-- Add a form element to handle submit -->
+
+					<!-- Form to submit city name -->
 					<form onsubmit="event.preventDefault(); result();">
 						<input
 							type="text"
