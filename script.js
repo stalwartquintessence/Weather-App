@@ -26,7 +26,6 @@ async function result() {
         document.getElementById("weather").innerText = description;
         document.getElementById("temper").innerText = `${temperature}°C`;
         document.getElementById("location").innerText = capitalize(city);
-        document.getElementById("weather-img").src = `https://openweathermap.org/img/w/${icon}.png`;
 
     } catch (error) {
         console.error(error);
